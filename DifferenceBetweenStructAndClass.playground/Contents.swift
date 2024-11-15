@@ -1,20 +1,22 @@
 import Foundation
 
 //Difference Between Struct And Class
-struct Data {
+struct StructData {
     var name: String
     var age: Int
     var company: String
 }
 
-var aungaung = Data(name: "Aung Aung", age: 20, company: "Apple")
-var kyawkyaw = Data(name: "Kyaw Kyaw", age: 22, company: "Google")
+var aungaung = StructData(name: "Aung Aung", age: 20, company: "Apple")
+var kyawkyaw = StructData(name: "Kyaw Kyaw", age: 22, company: "Google")
 
-var aungaungCopyData = aungaung
-aungaungCopyData.company = "Microsoft"
-aungaung.company
+var aungaungCopyStructData = aungaung
+aungaung.company //Apple
+aungaungCopyStructData.company = "Microsoft"
+aungaungCopyStructData.company //Microsoft
+aungaung.company //Apple
 
-class PersonData {
+class ClassData {
     var name: String
     var age: Int
     var company: String
@@ -26,8 +28,8 @@ class PersonData {
     }
 }
 
-var maungmaung = PersonData(name: "Maung Maung", age: 30, company: "Amazon")
-maungmaung.company
-var maungmaungCopyPersonData = maungmaung
-maungmaungCopyPersonData.company = "IBM"
-maungmaungCopyPersonData.company
+var maungmaung = ClassData(name: "Maung Maung", age: 30, company: "Amazon")
+maungmaung.company //Amazon
+var maungmaungCopyClassData = maungmaung
+maungmaungCopyClassData.company = "IBM"
+maungmaung.company //IBM
