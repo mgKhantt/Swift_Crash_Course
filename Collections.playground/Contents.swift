@@ -20,3 +20,6 @@ let mapArray = numbers.map { (value: Int) -> Int in
 
 mapArray
 numbers
+
+var numbersSet = Set(numbers)
+numbersSet.contains(2)
